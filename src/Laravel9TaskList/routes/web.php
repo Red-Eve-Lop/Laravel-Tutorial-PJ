@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 /* index page */
 Route::get("/folders/{id}/tasks", [TaskController::class,"index"])->name("tasks.index");
+
+Route::get('/check-env', function () {
+    return env('DB_DATABASE');
+});
