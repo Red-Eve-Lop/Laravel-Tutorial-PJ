@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Folder extends Model
 {
     use HasFactory;
+
+    public function getFolders(){
+        $folders = Folder::all();
+        return $folders;
+    }
 }
